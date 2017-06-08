@@ -1,0 +1,11 @@
+(ns game-of-life.config)
+
+(def ^:dynamic *win-name* "Game of life")
+(def ^:dynamic *win-width* 1600)
+(def ^:dynamic *win-height* 900)
+(def ^:dynamic *cell-width* 10)
+(def ^:dynamic *cell-height* 10)
+(def ^:dynamic *cell-fill-width* 9)
+(def ^:dynamic *cell-fill-height* 9)
+(def ^:dynamic *cell-n-horiz* (/ *win-width* *cell-width*))
+(def ^:dynamic *cell-n-vert* (/ *win-height* *cell-height*))

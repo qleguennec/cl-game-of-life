@@ -1,20 +1,12 @@
 (ns game-of-life.ui
-  (:require [game-of-life.gen
-             :refer [next-1 next-2 get-cell random-cells]])
-  (:import [java.awt Graphics Color Dimension]
-          [java.awt.event KeyListener KeyEvent]
-          [java.awt.image BufferedImage]
-          [javax.swing JFrame JPanel SwingUtilities]))
-
-(def ^:dynamic *win-name* "Game of life")
-(def ^:dynamic *win-width* 1600)
-(def ^:dynamic *win-height* 900)
-(def ^:dynamic *cell-width* 10)
-(def ^:dynamic *cell-height* 10)
-(def ^:dynamic *cell-fill-width* 9)
-(def ^:dynamic *cell-fill-height* 9)
-(def ^:dynamic *cell-n-horiz* (/ *win-width* *cell-width*))
-(def ^:dynamic *cell-n-vert* (/ *win-height* *cell-height*))
+  (:require
+    [game-of-life.gen :refer [next-1 next-2 get-cell random-cells]]
+    [game-of-life.config :refer :all])
+  (:import
+    [java.awt Graphics Color Dimension]
+    [java.awt.event KeyListener KeyEvent]
+    [java.awt.image BufferedImage]
+    [javax.swing JFrame JPanel SwingUtilities]))
 
 (defn keyboard
   "manages keyboard input"

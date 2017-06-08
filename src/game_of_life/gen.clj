@@ -1,5 +1,5 @@
 (ns game-of-life.gen
-  (:require [game-of-life.ui :refer [*cell-n-horiz* *cell-n-vert*]]))
+  (:require [game-of-life.config :refer [*cell-n-horiz* *cell-n-vert*]]))
 
 (defn get-cell
   "get cell at position x y"
