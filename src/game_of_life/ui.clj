@@ -1,7 +1,8 @@
 (ns game-of-life.ui
   (:require
-    [game-of-life.gen :refer [next-1 next-2 get-cell random-cells]]
-    [game-of-life.config :refer :all])
+    [game-of-life.gen :refer [next-1 next-2 random-cells]]
+    [game-of-life.config :refer :all]
+    [game-of-life.cell :as cell])
   (:import
     [java.awt Graphics Color Dimension]
     [java.awt.event KeyListener KeyEvent]
@@ -25,7 +26,7 @@
           y (range *cell-n-vert*)]
     (doto g
       (.setColor
-       (if (get-cell @cells x y)
+       (if (cell/get @cells x y)
          Color/RED
          Color/BLACK))
       (.fillRect
