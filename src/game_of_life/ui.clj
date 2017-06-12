@@ -33,6 +33,9 @@
        (* x *cell-width*) (* y *cell-height*)
        *cell-fill-width* *cell-fill-height*))))
 
+(defn- cells []
+  )
+
 (defn init-window
   [cells]
   (let [^JFrame frame (JFrame. *win-name*)
